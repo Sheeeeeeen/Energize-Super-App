@@ -9,10 +9,15 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.rememberNavController
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import ph.superapp.projectenergize.navigation.EnergizerRoute
 import ph.superapp.projectenergize.navigation.navigationItemsList
 import ph.superapp.projectenergize.navigation.setupNavHost
 
@@ -22,6 +27,8 @@ fun App() {
 
     val navController = rememberNavController()
 
+    var currentRouteTab by remember { mutableStateOf<EnergizerRoute>(EnergizerRoute.DashboardRoute) }
+
     MaterialTheme {
         Scaffold(
             modifier = Modifier.fillMaxSize(),
@@ -29,11 +36,11 @@ fun App() {
             bottomBar = {
                 BottomNavigation {
                     navigationItemsList.forEach {
-                        val isSelected =
-                            it.route.route == navController.currentDestination?.route
+                        val isSelected = currentRouteTab == it.route
                         BottomNavigationItem(
                             selected = isSelected,
                             onClick = {
+                                currentRouteTab = it.route
                                 navController.navigate(it.route) {
                                     // Pop up to the start destination of the graph to
                                     // avoid building up a large stack of destinations

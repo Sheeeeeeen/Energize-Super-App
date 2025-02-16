@@ -2,11 +2,11 @@ package ph.superapp.projectenergize.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
-import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.outlined.AccountCircle
-import androidx.compose.material.icons.outlined.AddCircle
 import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Person
 import androidx.compose.ui.graphics.vector.ImageVector
 
 data class NavigationItem(
@@ -30,8 +30,8 @@ val navigationItemsList = listOf(
         route = EnergizerRoute.MemberListRoute
     ),
     NavigationItem(
-        unSelectedIcon = Icons.Outlined.AddCircle,
-        selectedIcon = Icons.Filled.AddCircle,
+        unSelectedIcon = Icons.Outlined.Person,
+        selectedIcon = Icons.Filled.Person,
         title = "Add Member",
         route = EnergizerRoute.AddMemberRoute
     )
