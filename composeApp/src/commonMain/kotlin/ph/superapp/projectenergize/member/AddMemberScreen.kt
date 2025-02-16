@@ -24,5 +24,5 @@ private fun AddMemberContent() {
 @Composable
 @Preview
 private fun AddMemberPreview() {
-    MemberListScreen()
+    AddMemberContent()
 }
