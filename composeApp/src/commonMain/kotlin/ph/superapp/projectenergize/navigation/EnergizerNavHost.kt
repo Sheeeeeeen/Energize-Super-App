@@ -10,7 +10,7 @@ import ph.superapp.projectenergize.member.AddMemberScreen
 import ph.superapp.projectenergize.member.MemberListScreen
 
 @Composable
-fun setupNavHost(navController: NavHostController) {
+fun EnergizerNavHost(navController: NavHostController) {
 
     NavHost(
         modifier = Modifier,
