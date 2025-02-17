@@ -73,6 +73,8 @@ kotlin {
 
             implementation(libs.androidx.navigation.compose)
             implementation(libs.kotlinx.serialization)
+
+            implementation(libs.window.screen.size)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

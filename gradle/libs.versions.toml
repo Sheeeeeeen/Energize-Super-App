@@ -19,6 +19,7 @@ ktor = "3.0.3"
 logback = "1.5.16"
 androidx-compose-navigation = "2.8.0-alpha10"
 kotlinx-serialization = "1.8.0"
+window-size = "1.7.3"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -42,6 +43,9 @@ ktor-server-tests = { module = "io.ktor:ktor-server-tests-jvm", version.ref = "k
 #Navigation
 androidx-navigation-compose = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "androidx-compose-navigation" }
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+#Window Screen Class
+window-screen-size = { group = "org.jetbrains.compose.material3", name = "material3-window-size-class", version.ref = "window-size" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
